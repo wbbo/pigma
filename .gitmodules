@@ -1,4 +1,4 @@
 [submodule "crates/y7dl"]
 	path = crates/y7dl
-	url = https://github.com/akirco/y7dl.git
+	url = https://github.com/wbbo/y7dl.git
 	branch = main
