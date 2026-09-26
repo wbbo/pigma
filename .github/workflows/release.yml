@@ -151,7 +151,7 @@ jobs:
   aur-release:
     name: Publish to AUR
     needs: release
-    if: startsWith(github.ref, 'refs/tags/') # 只有在推送 tag 发布时才触发 AUR 更新
+    if: startsWith(github.ref, 'refs/tags/') && github.repository == 'akirco/pigma' # 只有在原仓库推送 tag 发布时才触发 AUR 更新（fork 跳过）
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
@@ -182,7 +182,7 @@ jobs:
   homebrew-tap:
     name: Update Homebrew tap
     needs: release
-    if: startsWith(github.ref, 'refs/tags/') # 只有在推送 tag 发布时才更新 tap
+    if: startsWith(github.ref, 'refs/tags/') && github.repository == 'akirco/pigma' # 只有在原仓库推送 tag 发布时才更新 tap（fork 跳过）
     runs-on: ubuntu-latest
     steps:
       - name: Checkout tap repository

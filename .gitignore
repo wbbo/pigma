@@ -1,3 +1,6 @@
 /target
 debug.log
 /aur
+# 发布打包产物（release.yml 在仓库根生成 pigma-<target>.tar.gz/.zip）
+/pigma-*.tar.gz
+/pigma-*.zip
